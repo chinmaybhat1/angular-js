@@ -14,5 +14,4 @@ export class AppComponent {
     this.testService = testService;
     this.testService.printToConsole('Service called');
   }
-  
 }
