@@ -1,1 +1,8 @@
-<p>view-component works!</p>
+GitHub login: <input type="text" [(ngModel)]="userName">
+<button (click)="search()">Search</button>
+<div *ngIf="response">
+    <p>GitHub user id: {{response.login}}</p>
+    <p>GitHub URL: {{response.html_url}}</p>
+    <p>GitHub name: {{response.name}}</p>
+    <p>GitHub bio: {{response.bio}}</p>
+</div>
