@@ -5,6 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class TestService {
   printToConsole(input){
-    console.log(input);
+    console.log(input + " service called");
   }
 }

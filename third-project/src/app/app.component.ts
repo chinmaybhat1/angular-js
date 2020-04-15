@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TestService } from './test.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,13 @@ import { TestService } from './test.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-  private testService: TestService;
   
-  constructor(testService: TestService){
-    this.testService = testService;
-    this.testService.printToConsole('Service called');
+  constructor(private testService: TestService, private http: HttpClient){
+    this.testService.printToConsole('test');
+  }
+
+  ngOnInit(){
+    let obs = this.http.get('https://api.github.com/users/chinmaybhat1');
+    obs.subscribe((response) => console.log(response))
   }
 }
