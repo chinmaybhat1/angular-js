@@ -4,5 +4,5 @@ GitHub login: <input type="text" [(ngModel)]="userName">
     <p>GitHub user id: {{response.login}}</p>
     <p>GitHub URL: {{response.html_url}}</p>
     <p>GitHub name: {{response.name}}</p>
-    <p>GitHub bio: {{response.bio}}</p>
+    <p *ngIf='response.bio'>GitHub bio: {{response.bio}}</p>
 </div>
