@@ -1,1 +1,7 @@
+<h1>Routing sample project</h1>
+<div class="app-container">
+<div *ngFor="let route of routes">
+    <a [routerLink]='route.url'>{{ route.linkName }}</a>
+</div>
+</div>
 <router-outlet></router-outlet>
